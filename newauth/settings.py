@@ -105,30 +105,33 @@ WSGI_APPLICATION = 'newauth.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 #first pip install psycopg2
-#DATABASES = {
-    #'default': {
-      #  'ENGINE':  'django.db.backends.postgresql',
-     #   'NAME': 'blockchain',
-    #    'USER': 'postgres',
-   #     'PASSWORD': 'Siance123',
-  #      'HOST': 'blockchain.ceki5yrdlrlb.us-east-2.rds.amazonaws.com',
- #       'PORT': '5432',
-#
-#
- #   }
-#}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Blockchain_007',
+#         'HOST': 'database-blockchain.ceki5yrdlrlb.us-east-2.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'blockchain',
+#         'USER': 'postgres',
+#         'PASSWORD': 'srutee',
+#         'HOST': '',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blockchain',
-        'USER': 'postgres',
-        'PASSWORD': 'srutee',
-        'HOST': '',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
