@@ -5,6 +5,7 @@ from django.db import models
 class BitcoinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bitcoin
-        fields ="__all__"
+        #fields ="__all__"
+        fields = ('id','name', 'price')
 
-        read_only_fields = ('created_date', 'updated_date')
+        read_only_fields = ('created_date', 'updated_date',)
