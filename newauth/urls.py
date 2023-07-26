@@ -19,9 +19,17 @@ from django.urls import path
 
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework.routers import DefaultRouter #create thr crls like /id
+from bitcoin1app.views import BitcoinViewSet
+
+router = DefaultRouter()#object
+router.register('bitcoin', BitcoinViewSet, basename='bitcoin')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('newauthapp.urls')),
+    path('api/', include(router.urls))
+
 ]
 
